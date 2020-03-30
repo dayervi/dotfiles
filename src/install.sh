@@ -52,10 +52,6 @@ if [ $(which zsh) != "$(brew --prefix)/bin/zsh" ]; then
   sudo dscl . -create /Users/$USER UserShell /usr/local/bin/zsh
 fi
 
-# apply mackup config
-action_echo "applying mackup config"
-ln -sf $(pwd)/config/.mackup.cfg ~/.mackup.cfg
-
 # apply proper zsh configuration file on home
 [ -e ~/.zshrc ] && ask_permission "overriding .zshrc file on your home"
 if [ $? -eq 1 ]; then
@@ -64,3 +60,17 @@ if [ $? -eq 1 ]; then
 else
   color_echo "zsh configuration has not been applied" 5
 fi
+
+# apply gitconfig
+[ -e ~/.gitconfig ] && ask_permission "overriding .gitconfig file on your home"
+if [ $? -eq 1 ]; then
+  action_echo "configuring git"
+  ln -sf $(pwd)/config/.gitconfig ~/.gitconfig
+  ln -sf $(pwd)/config/.gitignore_global ~/.gitignore_global
+else
+  color_echo "git configuration has not been applied" 5
+fi
+
+# apply mackup config
+action_echo "applying mackup config"
+ln -sf $(pwd)/config/.mackup.cfg ~/.mackup.cfg

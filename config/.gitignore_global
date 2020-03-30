@@ -1,0 +1,44 @@
+#os, temporary .. files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+desktop.ini
+*.bak
+*.swp
+*.swo
+*~
+*#
+
+# ide
+.vscode
+.idea
+.iml
+
+# logs and dbs
+*.log
+*.sql
+*.sqlite
+
+# packages
+*.7z
+*.dmg
+*.gz
+*.iso
+*.jar
+*.rar
+*.tar
+*.zip
+
+# compiled source
+*.com
+*.class
+*.dll
+*.exe
+*.o
+*.so
+*.pyc
+*.pyo
