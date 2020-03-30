@@ -1,28 +1,42 @@
 # taps
 tap "homebrew/bundle"
 tap "homebrew/cask"
+tap "epk/epk"
 
-# binaries
-brew "zsh"
-brew "bat"
+# common binaries
 brew "ack"
-brew "trash"
-brew "httpie"
-brew "git"
 brew "mackup"
+brew "trash"
+brew "zsh"
 
-# development
+# development binaries
+brew "bat"
+brew "git"
+brew "httpie"
 brew "node"
 
-# apps
-cask "forklift"
-cask "vlc"
-cask "appcleaner"
-cask "the-unarchiver"
-cask "rectangle"
+# common apps
 cask "alfred"
-cask "lastpass"
-cask "slack"
-cask "sourcetree"
-cask "insomnia"
+cask "appcleaner"
+cask "dropbox"
+cask "forklift"
 cask "google-chrome"
+cask "rectangle"
+cask "slack"
+cask "spotify"
+cask "vanilla"
+cask "vlc"
+
+# development apps
+cask "hyper"
+cask "insomnia"
+cask "sourcetree"
+
+# mac app store
+mas "LastPass", id: 926036361
+mas "Numbers", id: 409203825
+mas "Pages", id: 409201541
+mas "The Unarchiver", id: 425424353
+
+#fonts
+cask "font-sf-mono-nerd-font"
