@@ -11,6 +11,24 @@ function action_echo() {
   tput sgr0
 }
 
+function color_echo() {
+  tput setaf $2
+  echo "$1"
+  tput sgr
+}
+
+function ask_permission() {
+  tput setaf 3
+  read -n 1 -p "warning: $1, continue (y/n)? " answer
+  echo ""
+  tput sgr0
+  
+  case ${answer} in
+    y|Y ) return 1 ;;
+    * ) return 0 ;;
+  esac
+}
+
 ########
 # init #
 ########
@@ -37,3 +55,12 @@ fi
 # apply mackup config
 action_echo "applying mackup config"
 ln -sf $(pwd)/config/.mackup.cfg ~/.mackup.cfg
+
+# apply proper zsh configuration file on home
+[ -e ~/.zshrc ] && ask_permission "overriding .zshrc file on your home"
+if [ $? -eq 1 ]; then
+  action_echo "configuring zsh"
+  ln -sf $(pwd)/config/.zshrc ~/.zshrc
+else
+  color_echo "zsh configuration has not been applied" 5
+fi
