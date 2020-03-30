@@ -4,11 +4,25 @@ tap "homebrew/cask"
 
 # binaries
 brew "zsh"
-brew "mackup"
+brew "bat"
+brew "ack"
+brew "trash"
+brew "httpie"
 brew "git"
+brew "mackup"
 
 # development
+brew "node"
 
 # apps
-cask "insomnia"
+cask "forklift"
+cask "vlc"
+cask "appcleaner"
+cask "the-unarchiver"
+cask "rectangle"
+cask "alfred"
+cask "lastpass"
+cask "slack"
 cask "sourcetree"
+cask "insomnia"
+cask "google-chrome"
