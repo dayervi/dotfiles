@@ -12,7 +12,7 @@ function action_echo() {
 function color_echo() {
   tput setaf $2
   echo "$1"
-  tput sgr
+  tput sgr0
 }
 
 function ask_permission() {

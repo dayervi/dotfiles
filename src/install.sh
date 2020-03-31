@@ -64,4 +64,4 @@ action_echo "install atom packages"
 apm install --package-file $(pwd)/data/atom-needed-packages.txt
 
 
-color_echo "setting done 👌"
+color_echo "setting done 👌" 2
