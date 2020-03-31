@@ -62,3 +62,6 @@ ln -sf $(pwd)/config/.mackup.cfg ~/.mackup.cfg
 # install atom packages
 action_echo "install atom packages"
 apm install --package-file $(pwd)/data/atom-needed-packages.txt
+
+
+color_echo "setting done 👌"
