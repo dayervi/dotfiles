@@ -1,33 +1,7 @@
 #!/bin/bash
 
-function action_echo() {
-  tput setaf 4
-  echo -n "$1 "
-  for i in $(seq 1 3); do
-    sleep 0.5
-    echo -n "."
-  done
-  echo ""
-  tput sgr0
-}
+source $(dirname $0)/_common.sh
 
-function color_echo() {
-  tput setaf $2
-  echo "$1"
-  tput sgr
-}
-
-function ask_permission() {
-  tput setaf 3
-  read -n 1 -p "warning: $1, continue (y/n)? " answer
-  echo ""
-  tput sgr0
-  
-  case ${answer} in
-    y|Y ) return 1 ;;
-    * ) return 0 ;;
-  esac
-}
 
 ########
 # init #
@@ -52,6 +26,11 @@ if [ $(which zsh) != "$(brew --prefix)/bin/zsh" ]; then
   sudo dscl . -create /Users/$USER UserShell /usr/local/bin/zsh
 fi
 
+
+#################
+# common config #
+#################
+
 # apply proper zsh configuration file on home
 [ -e ~/.zshrc ] && ask_permission "overriding .zshrc file on your home"
 if [ $? -eq 1 ]; then
@@ -74,3 +53,12 @@ fi
 # apply mackup config
 action_echo "applying mackup config"
 ln -sf $(pwd)/config/.mackup.cfg ~/.mackup.cfg
+
+
+####################
+# specific configs #
+####################
+
+# install atom packages
+action_echo "install atom packages"
+apm install --package-file $(pwd)/data/atom-needed-packages.txt

@@ -1,0 +1,7 @@
+atom-beautify@0.33.4
+atom-ide-ui@0.13.0
+editorconfig@2.6.0
+file-icons@2.1.39
+ide-typescript@0.9.1
+pigments@0.40.2
+
