@@ -11,6 +11,7 @@ brew "zsh"
 
 # development binaries
 brew "bat"
+brew "exercism"
 brew "git"
 brew "httpie"
 brew "node"
@@ -24,6 +25,7 @@ cask "google-chrome"
 cask "rectangle"
 cask "slack"
 cask "spotify"
+cask "transmission"
 cask "vanilla"
 cask "vlc"
 
@@ -33,6 +35,7 @@ cask "insomnia"
 cask "sourcetree"
 
 # mac app store
+mas "ColorSlurp", id: 1287239339
 mas "LastPass", id: 926036361
 mas "Numbers", id: 409203825
 mas "Pages", id: 409201541
