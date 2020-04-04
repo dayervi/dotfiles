@@ -4,4 +4,3 @@ editorconfig@2.6.0
 file-icons@2.1.39
 ide-typescript@0.9.1
 pigments@0.40.2
-

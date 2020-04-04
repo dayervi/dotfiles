@@ -64,4 +64,7 @@ action_echo "install atom packages"
 apm install --package-file $(pwd)/data/atom-needed-packages.txt
 
 
+action_echo "applying some macosx config"
+source $(pwd)/config/.macosx
+
 color_echo "setting done 👌" 2
