@@ -35,6 +35,12 @@ cask "insomnia"
 cask "intellij-idea-ce"
 cask "sourcetree"
 
+# utilities
+cask "qlcolorcode"
+cask "qlmarkdown"
+cask "qlstephen"
+cask "quicklook-json"
+
 # mac app store
 mas "ColorSlurp", id: 1287239339
 mas "LastPass", id: 926036361
