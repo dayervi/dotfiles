@@ -32,6 +32,7 @@ cask "vlc"
 # development apps
 cask "hyper"
 cask "insomnia"
+cask "intellij-idea-ce"
 cask "sourcetree"
 
 # mac app store
