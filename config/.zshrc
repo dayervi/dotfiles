@@ -20,6 +20,7 @@ unsetopt PROMPT_SP
 
 source $ZSH/oh-my-zsh.sh
 
+
 ########
 # VARS #
 ########
@@ -27,9 +28,17 @@ source $ZSH/oh-my-zsh.sh
 #bat cli theme
 export BAT_THEME="base16"
 
+
 ########
 # PATH #
 ########
 
 # homebrew priority
 PATH=/usr/local/bin:$PATH
+
+
+##############
+# COMPLETION #
+##############
+
+source "/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.zsh.inc"

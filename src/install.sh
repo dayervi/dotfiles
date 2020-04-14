@@ -59,6 +59,12 @@ ln -sf $(pwd)/config/.mackup.cfg ~/.mackup.cfg
 # specific configs #
 ####################
 
+# proper java config
+action_echo "configuring java"
+jenv add /Library/Java/JavaVirtualMachines/adoptopenjdk-14.jdk/Contents/Home/
+jenv global openjdk64-14
+ln -sf $(pwd)/config/.mavenrc ~/.mavenrc
+
 # install atom packages
 action_echo "install atom packages"
 apm install --package-file $(pwd)/data/atom-needed-packages.txt

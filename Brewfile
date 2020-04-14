@@ -1,6 +1,7 @@
 # taps
 tap "homebrew/bundle"
 tap "homebrew/cask"
+tap "AdoptOpenJDK/openjdk"
 tap "epk/epk"
 
 # common binaries
@@ -10,10 +11,14 @@ brew "trash"
 brew "zsh"
 
 # development binaries
+cask "adoptopenjdk14"
 brew "bat"
 brew "exercism"
 brew "git"
+cask "google-cloud-sdk"
 brew "httpie"
+brew "jenv"
+brew "maven"
 brew "node"
 
 # common apps
@@ -42,7 +47,7 @@ cask "qlstephen"
 cask "quicklook-json"
 
 # mac app store
-mas "ColorSlurp", id: 1287239339
+#mas "ColorSlurp", id: 1287239339
 mas "LastPass", id: 926036361
 mas "Numbers", id: 409203825
 mas "Pages", id: 409201541
