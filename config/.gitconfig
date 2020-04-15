@@ -46,3 +46,4 @@
 [grep]
   lineNumber = true
   
+[filter "ignoreMyEmail"]
