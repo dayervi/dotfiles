@@ -1,3 +1,11 @@
+#!/bin/bash
+
+function color_echo() {
+  tput setaf $2
+  echo "$1"
+  tput sgr0
+}
+
 function action_echo() {
   tput setaf 4
   echo -n "$1 "
@@ -9,10 +17,9 @@ function action_echo() {
   tput sgr0
 }
 
-function color_echo() {
-  tput setaf $2
-  echo "$1"
-  tput sgr0
+function ask() {
+  read -p "$1 " answer
+  echo $answer
 }
 
 function ask_permission() {

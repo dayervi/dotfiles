@@ -46,6 +46,14 @@ if [ $? -eq 1 ]; then
   action_echo "configuring git"
   ln -sf $(pwd)/config/.gitconfig ~/.gitconfig
   ln -sf $(pwd)/config/.gitignore_global ~/.gitignore_global
+  if [ -z $(git config --global user.email) ]; then
+    email=$(ask "set global git config user.email:")
+    if [[ $email =~ .+@.+\..+ ]]; then
+      git config --global user.email "$email"
+    else
+      color_echo "git user email configuration has not been applied [error: unvalid email]" 5
+    fi
+  fi
 else
   color_echo "git configuration has not been applied" 5
 fi
