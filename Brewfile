@@ -19,6 +19,7 @@ cask "google-cloud-sdk"
 brew "httpie"
 brew "jenv"
 brew "maven"
+cask "ngrok"
 brew "node"
 
 # common apps
