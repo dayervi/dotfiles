@@ -28,6 +28,8 @@ cask "appcleaner"
 cask "dropbox"
 cask "forklift"
 cask "google-chrome"
+cask "microsoft-teams"
+cask "notion"
 cask "rectangle"
 cask "slack"
 cask "spotify"
@@ -36,12 +38,14 @@ cask "vanilla"
 cask "vlc"
 
 # development apps
+cask "atom"
 cask "hyper"
 cask "insomnia"
 cask "intellij-idea-ce"
 cask "sourcetree"
 
 # utilities
+cask "fliqlo"
 cask "qlcolorcode"
 cask "qlmarkdown"
 cask "qlstephen"
