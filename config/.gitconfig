@@ -47,3 +47,6 @@
   lineNumber = true
   
 [filter "ignoreMyEmail"]
+
+[includeIf "gitdir:~/Dev/creative-technologies/"]
+  path = .gitconfig-ct

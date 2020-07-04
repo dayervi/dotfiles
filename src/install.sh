@@ -45,6 +45,7 @@ fi
 if [ $? -eq 1 ]; then
   action_echo "configuring git"
   ln -sf $(pwd)/config/.gitconfig ~/.gitconfig
+  ln -sf $(pwd)/config/.gitconfig-ct ~/.gitconfig-ct
   ln -sf $(pwd)/config/.gitignore_global ~/.gitignore_global
   if [ -z $(git config --global user.email) ]; then
     email=$(ask "set global git config user.email:")
