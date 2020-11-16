@@ -41,6 +41,7 @@ cask "vlc"
 cask "atom"
 cask "hyper"
 cask "insomnia"
+cask "rider"
 cask "intellij-idea-ce"
 cask "sourcetree"
 
