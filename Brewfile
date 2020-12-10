@@ -1,7 +1,7 @@
 # taps
 tap "homebrew/bundle"
 tap "homebrew/cask"
-tap "AdoptOpenJDK/openjdk"
+# tap "AdoptOpenJDK/openjdk"
 tap "epk/epk"
 
 # common binaries
@@ -11,14 +11,12 @@ brew "trash"
 brew "zsh"
 
 # development binaries
-cask "adoptopenjdk14"
+# cask "adoptopenjdk14"
 brew "bat"
-brew "exercism"
 brew "git"
-cask "google-cloud-sdk"
 brew "httpie"
-brew "jenv"
-brew "maven"
+# brew "jenv"
+# brew "maven"
 cask "ngrok"
 brew "node"
 
@@ -34,13 +32,14 @@ cask "rectangle"
 cask "slack"
 cask "spotify"
 cask "transmission"
-cask "vanilla"
 cask "vlc"
 
 # development apps
 cask "atom"
+cask "firefox"
 cask "hyper"
 cask "insomnia"
+cask "microsoft-edge"
 cask "rider"
 cask "intellij-idea-ce"
 cask "sourcetree"
@@ -53,7 +52,6 @@ cask "qlstephen"
 cask "quicklook-json"
 
 # mac app store
-#mas "ColorSlurp", id: 1287239339
 mas "LastPass", id: 926036361
 mas "Numbers", id: 409203825
 mas "Pages", id: 409201541

@@ -60,8 +60,8 @@ else
 fi
 
 # apply mackup config
-action_echo "applying mackup config"
-ln -sf $(pwd)/config/.mackup.cfg ~/.mackup.cfg
+# action_echo "applying mackup config"
+# ln -sf $(pwd)/config/.mackup.cfg ~/.mackup.cfg
 
 
 ####################
@@ -69,15 +69,14 @@ ln -sf $(pwd)/config/.mackup.cfg ~/.mackup.cfg
 ####################
 
 # proper java config
-action_echo "configuring java"
-jenv add /Library/Java/JavaVirtualMachines/adoptopenjdk-14.jdk/Contents/Home/
-jenv global openjdk64-14
-ln -sf $(pwd)/config/.mavenrc ~/.mavenrc
+# action_echo "configuring java"
+# jenv add /Library/Java/JavaVirtualMachines/adoptopenjdk-14.jdk/Contents/Home/
+# jenv global openjdk64-14
+# ln -sf $(pwd)/config/.mavenrc ~/.mavenrc
 
 # install atom packages
 action_echo "install atom packages"
 apm install --package-file $(pwd)/data/atom-needed-packages.txt
-
 
 action_echo "applying some macosx config"
 source $(pwd)/config/.macosx
